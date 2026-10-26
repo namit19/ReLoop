@@ -1,0 +1,22 @@
+{
+  "name": "reloop",
+  "version": "1.0.0",
+  "description": "ReLoop — Full-Stack MERN Marketplace for Pre-Owned Goods",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"npm run backend:dev\" \"npm run frontend\"",
+    "build": "npm --prefix backend install && npm --prefix frontend install && npm --prefix frontend run build",
+    "start": "npm --prefix backend start",
+    "seed": "npm run backend:seed",
+    "backend": "npm --prefix backend start",
+    "backend:dev": "npm --prefix backend run dev",
+    "backend:seed": "npm --prefix backend run seed",
+    "backend:test": "npm --prefix backend test",
+    "frontend": "npm --prefix frontend run dev",
+    "frontend:build": "npm --prefix frontend run build",
+    "test": "npm --prefix backend test"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
